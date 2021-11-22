@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="./CSS/Bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="./CSS/Style.css" type="text/css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="Audio">
+        <source src="./office-calculator-single-button-press.mp3">
+    </audio>
+    <h1>CALCULATOR</h1>
+    <div class="calculator">
+        <input value = "0" class="screen" id="Display" disabled/>
+        <div class="buttons">
+            <button value="7" onclick="Display(7)" class="button">7</button>
+            <button value="8" onclick="Display(8)" class="button">8</button>
+            <button value="9" onclick="Display(9)" class="button">9</button>
+            <button value="4" onclick="Display(4)" class="button">4</button>
+            <button value="5" onclick="Display(5)" class="button">5</button>
+            <button value="6" onclick="Display(6)" class="button">6</button>
+            <button value="1" onclick="Display(1)" class="button">1</button>
+            <button value="2" onclick="Display(2)" class="button">2</button>
+            <button value="3" onclick="Display(3)" class="button">3</button>
+            <button value="0" onclick="Display(0)" class="number-0">0</button>
+            <button value="." onclick="Display('.')" class="button">.</button>
+        </div>
+        <div class="buttons-symbol">
+            <button onclick="Delete()" class="button delete">DEL</button>
+            <button value="" onclick="ClearScreen()" class="button AC">AC</button>
+            <button value="÷" onclick="Display('/')" class="button">÷</button>
+            <button value="×" onclick="Display('*')" class="button">×</button>
+            <button value="+" onclick="Display('+')" class="plus">+</button>
+            <button value="-" onclick="Display('-')" class="button">-</button>
+            <button value="=" onclick="Calculate()" class="button equal">=</button>
+        </div>   
+    </div>
+<script src="./JS/JS.js"></script>
+</body>
+</html>

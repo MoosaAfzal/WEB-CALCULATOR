@@ -1,0 +1,136 @@
+body {
+    background-image: linear-gradient( to right,  rgba(5,23,111,1) 16.4%, rgba(24,95,240,1) 64.5% );
+}
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Satisfy', cursive;
+    font-size: 60px;
+}
+.calculator {
+    box-sizing: border-box;
+    height: 550px;
+    width: 400px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: 4px solid black;
+    background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% );
+}
+.screen {
+    font-size: 40px;
+    width: 360px;
+    height: 72px;
+    margin-left: 18px;
+    margin-top: 25px;
+    border-radius: 10px;
+    border: 1px solid black;
+    overflow: scroll hidden; 
+    font-family: 'Orbitron', sans-serif;
+    background-color: #dcdbe1;
+    color: black;
+    border-radius: 5px;
+}
+.screen::-webkit-scrollbar {
+    display: none;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 60px;
+    margin-left: 20px;
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+}
+.button {
+    cursor: pointer;
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    box-shadow:0 3px 5px black;
+    background-color: rgba(255, 250, 250, 0.87);
+    transition: all 0.05s ease-in-out;
+    animation-name: button;
+    animation-duration: 2s;
+}
+@keyframes button {
+    from {width: 0; height: 0; font-size: 0;}
+    to {width: 60px; height: 60px; font-size: 30px;}
+}
+.buttons-symbol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 150px;
+    margin-top: 60px;
+}
+.AC {
+    color: red;
+    font-weight: 500;
+}
+.plus {
+    grid-row: span 2;
+    height: auto;
+    width: 60px;
+    transition: all 0.1s ease-in-out;
+    background-color: rgb(219, 50, 50);
+    box-shadow: 0 0 5px red;
+    cursor: pointer;
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow:0 3px 5px black;
+    animation-name: plus;
+    animation-duration: 2s;
+}
+@keyframes plus {
+    from {width: 0; font-size: 0;}
+    
+}
+.plus:active {
+    width: 60px;
+    transform: scale(0.95);
+}
+.number-0 {
+    cursor: pointer;
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow:0 3px 5px black;
+    background-color: rgba(255, 250, 250, 0.87);
+    grid-column: span 2;
+    width: 127px;
+    transition: all 0.1s ease-in-out;
+    animation-name: number-0;
+    animation-duration: 2s;
+}
+@keyframes number-0 {
+    from {width: 0; font-size: 0;}
+    to {width: 127px; font-size: 30px;}
+}
+.number-0:active {
+    width: 126px;
+    transform: scale(0.95);
+}
+.equal {
+    background-color: rgb(255, 225, 55);
+    box-shadow:0 3px 5px black
+}
+.button:active{
+    transform: scale(0.95);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.delete {
+    font-size: 29px;
+}
